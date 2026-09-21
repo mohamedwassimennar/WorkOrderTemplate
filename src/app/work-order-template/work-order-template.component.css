@@ -1,0 +1,1011 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #e8f0ff 0,
+      transparent 35%
+    ),
+    #f5f7fb;
+
+  padding: 35px 25px;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #1f2937;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  max-width: 1450px;
+  margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #FF0000,
+      #FF0000
+    );
+
+  color: white;
+
+  font-weight: 800;
+  font-size: 17px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(37, 99, 235, 0.25);
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 4px 0 0;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   COMPANY LOGOS
+========================================= */
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 8px 14px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(15, 23, 42, 0.06);
+}
+
+.logos img {
+  width: 70px;
+  height: 45px;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   WORKSPACE
+========================================= */
+
+.workspace {
+  display: grid;
+
+  grid-template-columns:
+    minmax(450px, 1fr)
+    minmax(450px, 1fr);
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.form-card,
+.result-card {
+  background: rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid
+    rgba(229, 231, 235, 0.9);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.form-card {
+  padding: 28px;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-header {
+  margin-bottom: 25px;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid #eef0f4;
+}
+
+.card-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #111827;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+
+  padding:
+    11px 13px;
+
+  border:
+    1px solid #dfe3e8;
+
+  border-radius: 9px;
+
+  background: #fafbfc;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    0.2s ease;
+}
+
+.field input {
+  height: 43px;
+}
+
+.field textarea {
+  min-height: 82px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+
+  background: white;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(59, 130, 246, 0.10);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+::placeholder {
+  color: #a7adb7;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.checkbox-field {
+  margin-bottom: 18px;
+}
+
+.checkbox-label {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  margin-bottom: 0 !important;
+
+  font-size: 13px !important;
+
+  font-weight: 650 !important;
+
+  color: #374151;
+}
+
+.checkbox-label input {
+  appearance: none;
+
+  width: 19px !important;
+  height: 19px !important;
+
+  min-width: 19px;
+
+  padding: 0 !important;
+
+  margin: 0;
+
+  border:
+    1px solid #cbd5e1;
+
+  border-radius: 5px;
+
+  background: white;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.checkbox-label input:checked {
+  background: #2563eb;
+
+  border-color: #2563eb;
+}
+
+.checkbox-label input:checked::after {
+  content: "✓";
+
+  position: absolute;
+
+  left: 4px;
+  top: 0px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   RECOMMENDED PARTS
+========================================= */
+
+.parts-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 25px;
+
+  margin-bottom: 12px;
+}
+
+.parts-title > label {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   ADD PART BUTTON
+========================================= */
+
+.add-part-button {
+  border: none;
+
+  border-radius: 9px;
+
+  padding: 9px 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.add-part-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px
+    rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   PART CARD
+========================================= */
+
+.part-card {
+  padding: 16px;
+
+  margin-bottom: 14px;
+
+  background: #f8fafc;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 11px;
+}
+
+
+/* =========================================
+   PART HEADER
+========================================= */
+
+.part-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.part-header strong {
+  color: #374151;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   REMOVE PART
+========================================= */
+
+.remove-part-button {
+  border:
+    1px solid #fecaca;
+
+  border-radius: 7px;
+
+  padding: 6px 10px;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.remove-part-button:hover {
+  background: #fee2e2;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ADD PART BOTTOM
+========================================= */
+
+.add-part-bottom {
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  padding: 10px;
+
+  border:
+    1px dashed #93c5fd;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.add-part-bottom:hover {
+  background: #dbeafe;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HPCE / PARTNER
+========================================= */
+
+.fixed-note {
+  margin-top: 5px;
+
+  margin-bottom: 25px;
+
+  padding: 13px 15px;
+
+  border:
+    1px solid #dbeafe;
+
+  border-radius: 10px;
+
+  background: #f0f7ff;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.fixed-note strong {
+  color: #2563eb;
+
+  font-weight: 750;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.actions button,
+.copy-button {
+  border: none;
+
+  border-radius: 9px;
+
+  padding:
+    11px 18px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.actions button:hover,
+.copy-button:hover {
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================
+   GENERATE
+========================================= */
+
+.generate-button {
+  flex: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #FF0000,
+      #FF0000
+    );
+
+  color: white;
+
+  box-shadow:
+    0 5px 12px
+    rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   CLEAR
+========================================= */
+
+.clear-button {
+  background: #f1f3f5;
+
+  color: #4b5563;
+}
+
+.clear-button:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.signature {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 25px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid #eef0f4;
+
+  font-size: 12px;
+
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.result-card {
+  padding: 28px;
+
+  position: sticky;
+
+  top: 25px;
+}
+
+
+/* =========================================
+   RESULT HEADER
+========================================= */
+
+.result-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid #eef0f4;
+}
+
+.result-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #111827;
+}
+
+.result-header p {
+  margin: 5px 0 0;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   COPY
+========================================= */
+
+.copy-button {
+  background: #16a34a;
+
+  color: white;
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.copy-button:disabled:hover {
+  transform: none;
+}
+
+
+/* =========================================
+   EMPTY RESULT
+========================================= */
+
+.empty-result {
+  height: 560px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #9ca3af;
+}
+
+.empty-icon {
+  width: 65px;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1f5f9;
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.empty-result h3 {
+  margin: 0 0 7px;
+
+  color: #4b5563;
+
+  font-size: 16px;
+}
+
+.empty-result p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   RESULT TEXT
+========================================= */
+
+.result-container {
+  width: 100%;
+}
+
+.result-text {
+  width: 100%;
+
+  height: 560px;
+
+  padding: 20px;
+
+  border:
+    1px solid #dfe3e8;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+
+  color: #1f2937;
+
+  font-family:
+    "Consolas",
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  resize: none;
+
+  overflow-y: scroll;
+
+  white-space: pre-wrap;
+
+  word-wrap: break-word;
+
+  outline: none;
+}
+
+.result-text:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(59, 130, 246, 0.10);
+
+  background: white;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.result-text::-webkit-scrollbar {
+  width: 9px;
+}
+
+.result-text::-webkit-scrollbar-track {
+  background: #f1f3f5;
+
+  border-radius: 10px;
+}
+
+.result-text::-webkit-scrollbar-thumb {
+  background: #c5cad3;
+
+  border-radius: 10px;
+}
+
+.result-text::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+
+/* =========================================
+   RESULT FOOTER
+========================================= */
+
+.result-footer {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding-top: 15px;
+
+  color: #a1a7b0;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #a1a7b0;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    position: static;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .page {
+    padding:
+      20px 12px;
+  }
+
+  .form-card,
+  .result-card {
+    padding: 20px;
+  }
+
+  .parts-title {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .add-part-button {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .result-text {
+    height: 450px;
+  }
+
+  .empty-result {
+    height: 450px;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .logos {
+    display: none;
+  }
+
+  .title-area h1 {
+    font-size: 23px;
+  }
+}

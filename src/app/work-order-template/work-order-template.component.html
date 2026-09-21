@@ -1,0 +1,293 @@
+<div class="page">
+
+  <div class="container">
+
+    <div class="header">
+
+      <div class="title-area">
+
+        <div class="icon">
+          WO
+        </div>
+
+        <div>
+          <h1>Work Order Template</h1>
+          <p>Work Order Instructions generator</p>
+        </div>
+
+      </div>
+
+      <div class="logos">
+        <img src="assets/Can.png" alt="Can">
+        <img src="assets/HP.png" alt="HP">
+      </div>
+
+    </div>
+
+
+    <div class="workspace">
+
+      <div class="form-card">
+
+        <div class="card-header">
+          <div>
+            <h2>Work Order Instructions</h2>
+            <p>Fill in the information below</p>
+          </div>
+        </div>
+
+
+        <div class="field checkbox-field">
+
+          <label class="checkbox-label">
+
+            <input
+              type="checkbox"
+              [(ngModel)]="responseTimeEnabled"
+            >
+
+            <span>Response time set: NBD</span>
+
+          </label>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Damaged Item
+          </label>
+
+          <input
+            type="text"
+            [(ngModel)]="damagedItem"
+            placeholder="Example: Damaged LCD Panel"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Component to Replace
+          </label>
+
+          <input
+            type="text"
+            [(ngModel)]="replacementPart"
+            placeholder="Example: LCD Panel"
+          >
+
+        </div>
+
+
+        <div class="field checkbox-field">
+
+          <label class="checkbox-label">
+
+            <input
+              type="checkbox"
+              [(ngModel)]="adpEnabled"
+            >
+
+            <span>ADP : Accidental damage coverage</span>
+
+          </label>
+
+        </div>
+
+
+        <div class="parts-title">
+
+          <label>
+            Recommended Parts
+          </label>
+
+          <button
+            type="button"
+            class="add-part-button"
+            (click)="addPart()"
+          >
+            + Add another part
+          </button>
+
+        </div>
+
+
+        <div
+          class="part-card"
+          *ngFor="let part of parts; let i = index"
+        >
+
+          <div class="part-header">
+
+            <strong>
+              Part {{ i + 1 }}
+            </strong>
+
+            <button
+              *ngIf="parts.length > 1"
+              type="button"
+              class="remove-part-button"
+              (click)="removePart(i)"
+            >
+              Remove
+            </button>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Recommended Part List
+            </label>
+
+            <input
+              type="text"
+              [(ngModel)]="part.partNumber"
+              placeholder="Example: N43565-001"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              QTY of each part
+            </label>
+
+            <input
+              type="number"
+              min="1"
+              [(ngModel)]="part.quantity"
+              placeholder="1"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Part Description
+            </label>
+
+            <textarea
+              [(ngModel)]="part.description"
+              rows="4"
+              placeholder="Example: N43565-001 SPS-RAW PANEL 14FHD AG UWVA250"
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="add-part-bottom"
+          (click)="addPart()"
+        >
+          + Add another recommended part
+        </button>
+
+
+        <div class="fixed-note">
+
+          <strong>
+            HPCE/Partner:
+          </strong>
+
+          <span>
+            If issue persists contact Tech Assist while you’re ONSITE at
+            800-477-6222, press 1 for Tech Assist
+          </span>
+
+        </div>
+
+
+        <div class="actions">
+
+          <button
+            type="button"
+            class="generate-button"
+            (click)="generateTemplate()"
+          >
+            ⚡ Generate Template
+          </button>
+
+          <button
+            type="button"
+            class="clear-button"
+            (click)="clearForm()"
+          >
+            Clear
+          </button>
+
+        </div>
+
+
+        <div class="signature">
+          Created by Mohamed Wassim Ennar 🔥
+        </div>
+
+      </div>
+
+
+      <div class="result-card">
+
+        <div class="result-header">
+
+          <div>
+            <h2>Generated Template</h2>
+          </div>
+
+          <button
+            type="button"
+            class="copy-button"
+            (click)="copyTemplate()"
+            [disabled]="generatedText === ''"
+          >
+            Copy
+          </button>
+
+        </div>
+
+
+        <div class="result-container">
+
+          <textarea
+            class="result-text"
+            [(ngModel)]="generatedText"
+            placeholder="Your generated Work Order Instructions will appear here..."
+          ></textarea>
+
+        </div>
+
+
+        <div class="result-footer">
+
+          <span>Work Order Template</span>
+
+          <span>•</span>
+
+          <span>Personal tool</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+      Work Order Template • Personal tool
+    </div>
+
+  </div>
+
+</div>
