@@ -32,7 +32,6 @@
         <div class="card-header">
           <div>
             <h2>Work Order Instructions</h2>
-            <p>Fill in the information below</p>
           </div>
         </div>
 
@@ -105,13 +104,6 @@
             Recommended Parts
           </label>
 
-          <button
-            type="button"
-            class="add-part-button"
-            (click)="addPart()"
-          >
-            + Add another part
-          </button>
 
         </div>
 
@@ -122,10 +114,6 @@
         >
 
           <div class="part-header">
-
-            <strong>
-              Part {{ i + 1 }}
-            </strong>
 
             <button
               *ngIf="parts.length > 1"
@@ -142,7 +130,7 @@
           <div class="field">
 
             <label>
-              Recommended Part List
+              Recommended Part
             </label>
 
             <input
@@ -157,7 +145,7 @@
           <div class="field">
 
             <label>
-              QTY of each part
+              Quantity of each part
             </label>
 
             <input
@@ -168,7 +156,6 @@
             >
 
           </div>
-
 
           <div class="field">
 
@@ -186,7 +173,6 @@
 
         </div>
 
-
         <button
           type="button"
           class="add-part-bottom"
@@ -194,21 +180,6 @@
         >
           + Add another recommended part
         </button>
-
-
-        <div class="fixed-note">
-
-          <strong>
-            HPCE/Partner:
-          </strong>
-
-          <span>
-            If issue persists contact Tech Assist while you’re ONSITE at
-            800-477-6222, press 1 for Tech Assist
-          </span>
-
-        </div>
-
 
         <div class="actions">
 

@@ -63,7 +63,7 @@ export class WorkOrderTemplateComponent {
       const replacement = this.replacementPart.trim();
 
       sections.push(
-        `PRODUCT HISTORY SUMMARY: ${damaged} : please mandatory replacing the ${replacement}`
+        `Product History Summary: ${damaged} : please mandatory replacing the ${replacement}`
       );
     }
 
